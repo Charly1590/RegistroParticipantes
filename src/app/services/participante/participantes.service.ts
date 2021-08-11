@@ -33,7 +33,7 @@ export class ParticipantesService {
 
   participantesOrdenados():Observable<any[]>{
     return this.afs.collection("participantes",
-    ref=> ref.where("llegada","!=",null).orderBy("llegada","desc")).valueChanges();
+    ref=> ref.where("llegada","!=",null).orderBy("llegada","asc")).valueChanges();
   }
 
 }
