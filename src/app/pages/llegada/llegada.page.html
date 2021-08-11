@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Llegada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let participante of participantes | async">
+    <ion-item (click)="abrirModal(participante)">
+      <ion-label>
+          <h2>Nombre: {{ participante.nombre }}</h2>
+          <p>Cedula {{participante.cedula}} </p>
+          <p>Edad: {{ participante.edad }}</p>
+          <p>Sexo: {{ participante.sexo }}</p>
+      </ion-label>
+    </ion-item>
+  </div>
+</ion-content>

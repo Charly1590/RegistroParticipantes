@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <ion-toolbar style="float: left;">
+    <div>
+      <ion-title>Participante</ion-title>
+    </div>
+    <div style="float: right;">
+      <ion-fab-button (click)="salir()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-fab-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let participante of participantes | async">
+    <ion-card-header>
+      <ion-card-title>Nombre: {{participante.nombre}}</ion-card-title>
+      <ion-card-subtitle>Cedula: {{participante.cedula}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Edad: {{participante.edad}}
+      <br>
+      Sexo: {{participante.sexo}}
+    </ion-card-content>
+        <ion-item>
+            <ion-datetime
+            placeholder="Hora de llegada" (click)="agregarTiemp(participante)"
+            displayFormat="HH:mm"
+            pickerFormat="HH:mm"
+            [(ngModel)]="participante.llegada"
+            cancelText="Cancelar"
+            doneText="OK">
+            </ion-datetime>
+        </ion-item>
+  </div>
+  <ion-button  expand="block" (click)="guardar()" >Guardar</ion-button>
+  
+</ion-content>

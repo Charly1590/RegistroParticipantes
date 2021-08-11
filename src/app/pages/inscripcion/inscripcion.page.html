@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inscripcion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Informacion basica</ion-label>
+    </ion-item-divider>
+  
+    <div class="datos">
+      
+      <ion-item>
+        <ion-label>Nombre: </ion-label>
+        <ion-input [(ngModel)]="participante.nombre"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Edad: </ion-label>
+        <ion-input [(ngModel)]="participante.edad"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cedula: </ion-label>
+        <ion-input [(ngModel)]="participante.cedula"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sexo: </ion-label>
+        <ion-input [(ngModel)]="participante.sexo"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="guardar()">Inscribir</ion-button>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+    </div>
+
+  </ion-item-group>
+</ion-content>
+
