@@ -23,13 +23,13 @@ export class ParticipantesService {
   
   getParticipantes():Observable<any[]>{
     return this.afs.collection("participantes",
-            ref=> ref.where("activo","==",true)).valueChanges();
+            ref=> ref.where("tInscrito","!=",null).orderBy("tInscrito","asc")).valueChanges();
   }
 
   findParticipante(id:any):Observable<any[]>{
     return this.afs.collection("participantes",
             ref=> ref.where("id","==",id)).valueChanges();
-  }
+  }tInscrito
 
   participantesOrdenados():Observable<any[]>{
     return this.afs.collection("participantes",

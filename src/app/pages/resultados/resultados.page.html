@@ -15,7 +15,10 @@
           <h2>Cedula {{participante.cedula}} </h2>
           <h2>Edad: {{ participante.edad }}</h2>
           <h2>Sexo: {{ participante.sexo }}</h2>
-          <h2>LLegada:
+          <h2>Hora de registro:
+            <ion-datetime value="{{ participante.tInscrito}}" displayFormat="HH:mm:ss"></ion-datetime>
+          </h2>
+          <h2>Hora de LLegada:
             <ion-datetime value="{{ participante.llegada}}" displayFormat="HH:mm:ss"></ion-datetime>
           </h2>
       </ion-label>

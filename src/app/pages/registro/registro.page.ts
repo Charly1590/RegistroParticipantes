@@ -13,7 +13,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./registro.page.scss'],
 })
 export class RegistroPage implements OnInit {
-
+   
+  date:Date=new Date();	
   showLoginOps = false;
   showRegOps = false;
   showRegGulOps = false;

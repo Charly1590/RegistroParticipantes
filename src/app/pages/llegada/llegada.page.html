@@ -15,6 +15,9 @@
           <p>Cedula {{participante.cedula}} </p>
           <p>Edad: {{ participante.edad }}</p>
           <p>Sexo: {{ participante.sexo }}</p>
+          <h2>Hora de registro:
+            <ion-datetime value="{{ participante.tInscrito}}" displayFormat="HH:mm:ss"></ion-datetime>
+          </h2>
       </ion-label>
     </ion-item>
   </div>

@@ -13,7 +13,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./inscripcion.page.scss'],
 })
 export class InscripcionPage implements OnInit {
-
+  
+  date:any;
   constructor(public userService: UsuariosService,
               public router: Router,
               public participaneService: ParticipantesService,
@@ -49,6 +50,8 @@ export class InscripcionPage implements OnInit {
       }
       else{
         this.participante.llegada=null;
+        this.date = new Date().toISOString();;
+        this.participante.tInscrito=this.date;
         this.participaneService.save(this.participante);
         this.participante.nombre=null;
         this.participante.edad=null;
