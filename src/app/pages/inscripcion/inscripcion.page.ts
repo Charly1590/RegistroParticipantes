@@ -68,5 +68,8 @@ export class InscripcionPage implements OnInit {
     this.auth.signOut;
     this.router.navigate(['']);
   }
+  irARegistro(){
+    this.router.navigate(['/registro']);
+  }
 
 }
