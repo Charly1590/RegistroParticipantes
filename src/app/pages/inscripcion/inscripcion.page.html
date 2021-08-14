@@ -8,45 +8,53 @@
 </ion-header>
 
 <ion-content>
-  <ion-item-group>
-    <ion-item-divider>
-      <ion-label>Informacion basica</ion-label>
-    </ion-item-divider>
+
+  <ion-card>
+    <ion-card-header>
+      <img src="../../assets/imagenes/Inscripcion.png"/>
+    </ion-card-header>
   
-    <div class="datos">
+    <ion-card-content>
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label>Informacion basica</ion-label>
+        </ion-item-divider>
       
-      <ion-item>
-        <ion-label>Nombre: </ion-label>
-        <ion-input [(ngModel)]="participante.nombre"></ion-input>
-      </ion-item>
+        <div class="datos">
+          
+          <ion-item>
+            <ion-label>Nombre: </ion-label>
+            <ion-input [(ngModel)]="participante.nombre"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Edad: </ion-label>
+            <ion-input [(ngModel)]="participante.edad"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label>Cedula: </ion-label>
+            <ion-input [(ngModel)]="participante.cedula"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label>Sexo: </ion-label>
+            <ion-input [(ngModel)]="participante.sexo"></ion-input>
+          </ion-item>
+    
+          <ion-button expand="block" (click)="guardar()" color="secondary">Inscribir</ion-button>
+          <ion-button  expand="block" (click)="irARegistro()" color="secondary">Ir al Registro</ion-button>
+          
+        </div>
+      </ion-item-group>
+    </ion-card-content>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="logout()">
+        <ion-icon name="log-out" color="secondary"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-card>
+
   
-      <ion-item>
-        <ion-label>Edad: </ion-label>
-        <ion-input [(ngModel)]="participante.edad"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Cedula: </ion-label>
-        <ion-input [(ngModel)]="participante.cedula"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Sexo: </ion-label>
-        <ion-input [(ngModel)]="participante.sexo"></ion-input>
-      </ion-item>
-
-      <ion-button expand="block" (click)="guardar()">Inscribir</ion-button>
-      <ion-button  expand="block" (click)="irARegistro()">Ir al Registro</ion-button>
-
-
-      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="logout()">
-          <ion-icon name="log-out"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-      
-    </div>
-
-  </ion-item-group>
 </ion-content>
 

@@ -8,51 +8,60 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>   
 
-    <ion-row>
-      <ion-col size="10" offset="1">
-        <ion-button fill="solid" expand="block" (click)="login()">Iniciar Sesion</ion-button>
+  <ion-card>
+    <ion-card-header>
+      <img src="../../assets/imagenes/logo-instituto-de-Tecnologias.png"/>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-grid>   
 
-        <ion-item *ngIf="showLoginOps">
-          <ion-label position="floating">Correo</ion-label>
-          <ion-input type="text" [(ngModel)]="usuario.correo"></ion-input>
-        </ion-item>
-
-        <ion-item *ngIf="showLoginOps">
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input type="password" [(ngModel)]="usuario.clave"></ion-input>
-        </ion-item>
-
-        <ion-button  expand="block" (click)="verificar()" *ngIf="showLoginOps">Acceder</ion-button>
-
-      </ion-col>
-    </ion-row>
-
-
-    <ion-row>
-      <ion-col size="10" offset="1">
-        <ion-button fill="solid" expand="block" (click)="reg()">Registrarse </ion-button>
-
-        <ion-item *ngIf="showRegOps">
-          <ion-label position="floating">Correo</ion-label>
-          <ion-input [(ngModel)]="usuario.correo"></ion-input>
-        </ion-item>
-
-        <ion-item *ngIf="showRegOps">
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input type="password" [(ngModel)]="usuario.clave"></ion-input>
-        </ion-item>
-
-        <ion-item *ngIf="showRegOps">
-          <ion-label position="floating">Confirmar contraseña</ion-label>
-          <ion-input type="password" [(ngModel)]="cclave"></ion-input>
-        </ion-item>
-
-        <ion-button  expand="block" (click)="register()" *ngIf="showRegOps">Crear</ion-button>
-
-      </ion-col>
-    </ion-row>
-  </ion-grid> 
+        <ion-row>
+          <ion-col size="10" offset="1">
+            <ion-button fill="solid" expand="block" (click)="login()" color="secondary">Iniciar Sesion</ion-button>
+    
+            <ion-item *ngIf="showLoginOps">
+              <ion-label position="floating">Correo</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.correo"></ion-input>
+            </ion-item>
+    
+            <ion-item *ngIf="showLoginOps">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="usuario.clave"></ion-input>
+            </ion-item>
+    
+            <ion-button  expand="block" (click)="verificar()" *ngIf="showLoginOps" color="secondary">Acceder</ion-button>
+    
+          </ion-col>
+        </ion-row>
+    
+    
+        <ion-row>
+          <ion-col size="10" offset="1">
+            <ion-button fill="solid" expand="block" (click)="reg()" color="secondary">Registrarse </ion-button>
+    
+            <ion-item *ngIf="showRegOps">
+              <ion-label position="floating">Correo</ion-label>
+              <ion-input [(ngModel)]="usuario.correo"></ion-input>
+            </ion-item>
+    
+            <ion-item *ngIf="showRegOps">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="usuario.clave"></ion-input>
+            </ion-item>
+    
+            <ion-item *ngIf="showRegOps">
+              <ion-label position="floating">Confirmar contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="cclave"></ion-input>
+            </ion-item>
+    
+            <ion-button  expand="block" (click)="register()" *ngIf="showRegOps" color="secondary">Crear</ion-button>
+    
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+    </ion-card-content>
+  </ion-card>
   
 </ion-content>
